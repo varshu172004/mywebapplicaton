@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pre-Book Your Car</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #0b0b0b;
+                color: #333;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .prebook-container {
+                background-color: rgb(223, 88, 11);
+                padding: 30px;
+                border-radius: 5cap;
+                box-shadow: 0 4px 8px rgba(226, 239, 41, 0.1);
+                width: 400px;
+            }
+            h2 {
+                color: #010f08;
+                margin-bottom: 20px;
+            }
+            .form-group {
+                margin-bottom: 15px;
+            }
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+            }
+            .form-group input, .form-group select, .form-group textarea {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+            .form-group textarea {
+                resize: vertical;
+                height: 100px;
+            }
+            .form-group button {
+                width: 100%;
+                padding: 10px;
+                background-color: #0eba33;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            .form-group button:hover {
+                background-color: #0056b3;
+            }
+            h1{
+            font-size:2.5em;
+            color: #fff;
+            text-align: center;
+
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+        <h1>Car World</h1>
+        <nav>
+            <ul>
+                <li><a href="myproj.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+        <div class="prebook-container">
+            <h2>Pre-Book Your Car</h2>
+            <form action="prebook_submit.html" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="carModel">Select Car Model:</label>
+                    <select id="carModel" name="carModel" required>
+                        <option value="Model 1">Model 1</option>
+                        <option value="Model 2">Model 2</option>
+                        <option value="Model 3">Model 3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="comments">Additional Comments:</label>
+                    <textarea id="comments" name="comments" placeholder="Any specific requests or preferences?"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Pre-Book Now</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

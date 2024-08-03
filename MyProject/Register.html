@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-color: #0c0707;
+            font-family: Arial, sans-serif;
+            color: #eadddd;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0e0601;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #eadddd;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .form-container {
+            background-color: #f45410;
+            padding: 30px;
+            margin: 50px auto;
+            width: 350px;
+            border-radius: 5cap;
+            box-shadow: 0 4px 8px rgba(224, 212, 212, 0.1);
+            text-align: center;
+        }
+
+        .form-container h2 {
+            margin-top: 0;
+            color: #060404;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="number"],
+        .form-container input[type="email"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #d1c8c8;
+            border-radius: 5px;
+            background-color: #f7f4f4;
+            color: #070101;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #119532;
+            color: #eadddd;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #22a6d6;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Car World</h1>
+        <nav>
+            <ul>
+                <li><a href="myproj.html">Home</a></li>
+                <!-- Add more links here if needed -->
+            </ul>
+        </nav>
+    </header>
+    <div class="form-container">
+        <h2>Register</h2>
+        <form action="thankyou.html" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="Name" placeholder="Enter Name" required><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="EMail" placeholder="Enter Email" required><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="number" id="phone" name="PhoneNumber" placeholder="Enter Phone Number" required><br>
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="Address" placeholder="Enter Address" required><br>
+            
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>

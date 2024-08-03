@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Application - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            overflow-x: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-height: 500px;
+            overflow: hidden;
+        }
+        .carousel img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .carousel-button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .features {
+            text-align: center;
+            padding: 20px;
+        }
+        .features h2 {
+            margin: 0 0 20px;
+        }
+        .feature {
+            display: inline-block;
+            width: 30%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .feature img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        footer {
+            background: #333;
+            color:#fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    
+    </style>
+</head> 
+<body>
+
+<header>
+    <h1>Car World</h1>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="models.html">Models</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="Register.html">Register</a></li>
+            <li><a href="Prebook.html">Prebook</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Our Car World</h1>
+        <p>Explore the best cars and features available.</p>
+    </div>
+</div>
+
+<div class="carousel">
+    <img src="img/car.jpg" alt="car Image ">
+    <img src="img/car11.jpg" alt="car Image 2">
+    <img src="img/car4.jpg" alt="car Image 3">
+    <div class="carousel-buttons">
+        <button class="carousel-button" id="prev">&lt;</button>
+        <button class="carousel-button" id="next">&gt;</button>
+    </div>
+</div>
+
+<div class="features">
+    <h2>Featured Cars</h2>
+    <div class="feature">
+        <img src="path/to/feature1.jpg" alt="Feature 1">
+        <h3>Car Model 1</h3>
+        <p>Description of car model .</p>
+    </div>
+    <div class="feature">
+        <img src="path/to/feature2.jpg" alt="Feature 2">
+        <h3>Car Model 2</h3>
+        <p>Description of car model 2.</p>
+    </div>
+    <div class="feature">
+        <img src="path/to/feature3.jpg" alt="Feature 3">
+        <h3>Car Model 3</h3>
+        <p>Description of car model 3.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Car Application</p>
+</footer>
+
+<script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carousel img');
+    const totalImages = images.length;
+
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.style.display = i === index ? 'block' : 'none';
+        });
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % totalImages;
+        showImage(currentIndex);
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        showImage(currentIndex);
+    }
+
+    document.getElementById('next').addEventListener('click', nextImage);
+    document.getElementById('prev').addEventListener('click', prevImage);
+
+    // Initialize carousel
+    showImage(currentIndex);
+    setInterval(nextImage, 5000); // Change image every 5 seconds
+</script>
+
+</body>
+</html>
+
